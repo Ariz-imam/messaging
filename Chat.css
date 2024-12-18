@@ -1,0 +1,329 @@
+/* General Reset and Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #3e3d3d;
+  color: #361a1a;
+}
+
+/* Login Page Styling */
+.login-container {
+  background: #eae4e4;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  color: #1a1b1a;
+  margin-bottom: 20px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.login-container input:focus {
+  border-color: #014d9e;
+  outline: none;
+}
+
+.login-container button {
+  background-color: #1a293a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:disabled {
+  background-color: #8195b9;
+  cursor: not-allowed;
+}
+
+.login-container button:hover:enabled {
+  background-color: #222249;
+}
+
+/* Chat Container */
+.chat-container {
+  background: #ffffff;
+  max-width: 700px;
+  margin: 30px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-container h2 {
+  background-color: #1d3111;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+/* Chat Window */
+.chat-window {
+  flex-grow: 1;
+  background-color: #f7f7f7;
+  padding: 15px;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  background: #e1f5fe;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: fit-content;
+  max-width: 60%;
+}
+
+.chat-message strong {
+  color: #1e1d1d;
+}
+
+.chat-message.received {
+  background-color: #c8e6c9;
+  align-self: flex-start;
+}
+
+.chat-message.sent {
+  background-color: #e1f5fe;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.chat-image {
+  max-width: 300px;
+  /* Set a fixed max width */
+  max-height: 200px;
+  /* Set a fixed max height */
+  width: auto;
+  /* Maintain the aspect ratio */
+  height: auto;
+  /* Maintain the aspect ratio */
+  border-radius: 5px;
+  display: block;
+  /* Ensures the image does not exceed container width */
+  margin: 5px auto;
+  /* Centers the image horizontally */
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.message-content p {
+  margin: 0;
+}
+
+.delete-button {
+  border: none;
+  background: transparent;
+  color: rgb(116, 59, 55);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.delete-button:hover {
+  color: rgb(76, 25, 25);
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #b59999;
+}
+
+.input-container input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #b59999;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.input-container input:focus {
+  border-color: #071d34;
+  outline: none;
+}
+
+.input-container button {
+  background-color: #0a2d52;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.input-container button:hover {
+  background-color: #0e2237;
+}
+
+.voice-controls button {
+  background-color: #522e9b;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.voice-controls button:hover {
+  background-color: #0e3721;
+}
+
+audio {
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Input Container */
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Space between elements */
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #b59999;
+}
+
+.input-container input[type="text"] {
+  flex-grow: 3;
+  /* Make the message box take more space */
+  padding: 12px;
+  /* Larger padding for bigger box */
+  border: 1px solid #b59999;
+  border-radius: 20px;
+  font-size: 1.1rem;
+}
+
+.input-container button,
+.voice-controls button,
+.image-button {
+  background-color: #1f4e35;
+  /* Common button styling */
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  /* Align icons/text */
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container button:hover,
+.voice-controls button:hover,
+.image-button:hover {
+  background-color: #0b1e32;
+}
+
+.voice-controls button {
+  background-color: #522e9b;
+  /* Different color for voice record */
+}
+
+.voice-controls button:hover {
+  background-color: #3b2171;
+}
+
+.image-button {
+  background-color: #4caf50;
+  /* Green color for the image button */
+}
+
+.image-button:hover {
+  background-color: #388e3c;
+}
+
+.icon {
+  margin-right: 5px;
+  /* Space between icon and text */
+  font-size: 1.2rem;
+  /* Adjust icon size */
+}
+
+/* Style the audio player */
+.message-content audio {
+  width: 200px;
+  /* Make it larger for better appearance */
+  margin: 5px 0;
+  /* Add some spacing */
+  outline: none;
+  /* Remove the outline */
+  border-radius: 5px;
+  /* Slight rounded corners */
+}
+
+/* Add padding to message container */
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+/* Styling for better spacing in message header */
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.message-header strong {
+  color: #444;
+  font-size: 14px;
+}
+
+/* General message input area spacing */
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #d8b7b7;
+  border-top: 1px solid #ccc;
+}
